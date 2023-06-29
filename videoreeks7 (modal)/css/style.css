@@ -1,0 +1,244 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+:root{
+    --background-color: #eee;
+    --background-color-product: white;
+    --font-color-white: white;
+    --background-color-blue: #00aeb1;
+    --background-color-pink: #f77578;
+    --background-color-blue-rgba: rgba(0, 174, 177, 0.8);
+    --background-color-pink-rgba: rgba(247, 117, 120, 0.8);
+    --background-color-blue-rgba-low-opacity: rgba(0, 174, 177, 0.2);
+    --background-color-pink-rgba-low-opacity: rgba(247, 117, 120, 0.2);
+}
+html{
+    font-size: 62.5%;
+
+
+}
+body{
+    font-size: 2rem;
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 4rem;
+    font-family: 'Open Sans', sans-serif;
+    flex-wrap: wrap;
+    padding: 4rem;
+
+
+
+}
+.modal{
+    width: 80vw;
+    height: auto;
+    background: blue;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    position: relative;
+    display: none;
+
+}
+
+.modal__figure{
+    width: 100%;
+    height: 100%;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+
+
+}
+.modal__figure--pink{
+    background: var(--background-color-pink);
+}
+.modal__figure--blue{
+    background: var(--background-color-blue);
+
+}
+.modal__image{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.modal__section{
+    width: 100%;
+    height:100%;
+    background: var(--background-color-product);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+
+}
+.modal__heading{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 200%;
+    
+}
+.modal__heading--pink{
+    border-bottom: solid var(--background-color-pink);
+}
+.modal__heading--blue{
+    border-bottom: solid var(--background-color-blue);
+
+}
+.modal__text{
+    font-size: 70%;
+    font-weight: 400;
+    line-height: 1.5;
+
+}
+.modal__link{
+    font-size: 70%;
+
+}
+.modal__button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    width: 7rem;
+    height: 7rem;
+    border: none;
+    border-radius: 50%;
+    font-size: 130%;
+    font-weight: 500;
+    
+
+}
+.modal__button--pink{
+    background: var(--background-color-pink);
+}
+.modal__button--blue{
+    background: var(--background-color-blue);
+    
+}
+.modal__button:hover{
+    cursor: pointer;
+
+}
+.product{
+    width: 32rem;
+    height: 40rem;
+    position: relative;
+    background: var(--background-color-product);
+
+
+}
+.product:hover{
+    cursor: pointer;
+
+}
+.product:hover .product__figure::after{
+    transform: translate(-50%, -50%);
+    width: 25rem;
+    height: 25rem;
+
+}
+.product:hover .product__figure{
+    transform: translateY(-2rem) scale(0.9);  
+}
+
+.product::after{
+    content:"";
+    position: absolute;
+    top: 95%;
+    left: 0;
+    height: 10%;
+    width: 100%;
+    z-index: -1;
+    filter: blur(0.8rem);
+}
+.product__figure--blue::after{
+    background: var(--background-color-blue-rgba-low-opacity);
+
+}
+.product__figure--pink::after{
+    background: var(--background-color-pink-rgba-low-opacity);
+}
+.product--blue::after{
+    background: var(--background-color-blue-rgba);
+}
+.product--pink::after{
+    background: var(--background-color-pink-rgba);
+
+
+
+}
+.product__figure{
+    height: 80%;
+    width: 100%;
+    padding: 2rem;
+    position: relative;
+    z-index:0;
+    transition: 0.2s all;
+
+}
+.product__figure::after{
+    content:"";
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    z-index: -1;
+    transition: 0.2s all;
+
+
+}
+.product__image{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+
+}
+.product__section{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.product__section--blue{
+    background: var(--background-color-blue);
+
+}
+.product__section--pink{
+    background: var(--background-color-pink);
+
+}
+.product__button{
+    outline: none;
+    border: none;
+    background: none;
+    color: var(--font-color-white);
+    font-size: 80%;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+
+}
+@media screen and (max-width: 62.5rem){
+    .modal{
+        grid-template-columns: 100%;
+
+    }
+    .modal__button{
+        display: none;
+
+    }
+}

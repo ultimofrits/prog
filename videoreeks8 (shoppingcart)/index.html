@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@400;500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="/js/main.js" defer></script>
+    <script src="/js/fontawesome.js" crossorigin="anonymous"></script>
+    <title>Shoppingcart website</title>
+</head>
+<body>
+    
+    <section id="js--checkoutwindow" class="checkout a-popup">
+        <ul class="checkout__list">
+            <li class="checkout__listitem">
+                <img src="/img/c3po-image.webp" alt="pandora sieraad van c3po" class="checkout__image">
+                <p class="checkout__title">C3po - Star Wars</p>
+                <p id="js--amount-c3po" class="checkout__amount"></p>
+            </li>
+            <li class="checkout__listitem">
+                <img src="/img/ironman.webp" alt="pandora sieraad van ironman" class="checkout__image">
+                <p class="checkout__title">Ironman - Marvel</p>
+                <p id="js--amount-ironman" class="checkout__amount"></p>
+            </li>
+            <li class="checkout__listitem">
+                <img src="/img/walle.webp" alt="pandora siraad van Wall-e" class="checkout__image">
+                <p class="checkout__title">Wall-e - Pixar</p>
+                <p id="js--amount-walle" class="checkout__amount"></p>
+            </li>
+        </ul>
+
+    </section>
+
+    <article id="js--shoppingmodal" class="modal a-popup">
+        &#10003; Added to Cart
+    </article>
+
+    <button id="js--checkoutbutton" class="shoppingcart">
+        logo
+        <div class="shoppingcart__message">0</div>
+    </button>
+  
+    <section class="fill"></section>
+    <section class="searchbar">
+        <input id="js--searchbar" type="text" placeholder="search for a product here..." class="searchbar__input">
+        <i class="fa-solid fa-magnifying-glass searchbar__glass"></i>
+    </section>
+    <main>
+    
+        <ul class="games">
+            <li data-title="C3PO-STARWARS" class="games__game">
+                <figure class="games__figure">
+                    <img src="/img/c3po-image.webp" alt="pandora siraad van c3po" class="games__image">
+                </figure>
+                <section class="games__body">
+                    <h2 class="games__h2">$49</h2>
+                    <h3 class="games__h3">C3po - Star Wars</h3>
+                    <div class="games__stars">★★★★★</div>
+                    <button data-product="c3po" class="games__button">Add to Cart</button>
+                </section>
+            
+            </li>
+            <li data-title="IRONMAN-MARVEL" class="games__game">
+                <figure class="games__figure"><img src="/img/ironman.webp" alt="pandora siraad van ironman" class="games__image"></figure>
+                <section class="games__body">
+                    <s>$59</s>
+                    <h2 class="games__h2">$39</h2>
+                    <h3 class="games__h3">Ironman - Marvel</h3>
+                    <div class="games__stars">★★★★</div>
+                    <button data-product="ironman" class="games__button">Add to Cart</button>
+                </section>
+               
+            </li>
+            <li data-title="WALL-E-PIXAR" class="games__game games__game--third">
+                <figure class="games__figure">
+                    <img src="/img/walle.webp" alt="Wall-e van Pixar" class="games__image">
+                </figure>
+                <section>
+                    <h2 class="games__h2">$45</h2>
+                    <h3 class="games__h3">Wall-e - Pixar</h3>
+                    <div class="games__stars">★★★★★</div>
+                    <button data-product="walle" class="games__button">Add to Cart</button>
+                </section>
+            </li>
+        </ul>
+    </main>
+    <section class="fill"></section>
+</body>
+</html>
